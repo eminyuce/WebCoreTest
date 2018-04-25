@@ -55,7 +55,8 @@ namespace WebCoreTest.Controllers
         // GET: Products/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var item = ProductService.GetNwmProduct(id);
+            return View(item);
         }
 
         // POST: Products/Edit/5

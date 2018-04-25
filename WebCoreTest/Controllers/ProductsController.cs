@@ -79,7 +79,8 @@ namespace WebCoreTest.Controllers
         // GET: Products/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var item = ProductService.GetNwmProduct(id);
+            return View(item);
         }
 
         // POST: Products/Delete/5
@@ -90,7 +91,7 @@ namespace WebCoreTest.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                ProductService.DeleteNwmProduct(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

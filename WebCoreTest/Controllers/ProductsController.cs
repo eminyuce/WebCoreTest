@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebCoreTest.Data.Entities;
 using WebCoreTest.Services.DB.Services;
 
 namespace WebCoreTest.Controllers
@@ -38,12 +39,12 @@ namespace WebCoreTest.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(NwmProduct product)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                ProductService.SaveOrUpdateNwmProduct(product);
                 return RedirectToAction(nameof(Index));
             }
             catch

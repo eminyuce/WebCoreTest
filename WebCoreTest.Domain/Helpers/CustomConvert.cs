@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
-namespace WebCoreTest.Helpers
+namespace WebCoreTest.Domain.Helpers
 {
     public static class CustomConvert
     {

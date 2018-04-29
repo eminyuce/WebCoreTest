@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using WebCoreTest.Data.Entities;
-using WebCoreTest.Services.DB.Repositories;
+using WebCoreTest.Domain.Entities;
+using WebCoreTest.Domain.DB.Repositories;
 
-namespace WebCoreTest.Services.DB.Services
+namespace WebCoreTest.Domain.DB.Services
 {
     public interface IProductService
     {

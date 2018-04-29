@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebCoreTest.Data.Entities;
-using WebCoreTest.Services.DB.Services;
+using WebCoreTest.Domain.Entities;
+using WebCoreTest.Domain.DB.Services;
 
 namespace WebCoreTest.Controllers
 {
@@ -27,7 +27,8 @@ namespace WebCoreTest.Controllers
         // GET: Products/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var item = ProductService.GetNwmProduct(id);
+            return View(item);
         }
 
         // GET: Products/Create
@@ -63,12 +64,12 @@ namespace WebCoreTest.Controllers
         // POST: Products/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        // public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(NwmProduct product)
         {
             try
             {
-                // TODO: Add update logic here
-
+                ProductService.SaveOrUpdateNwmProduct(product);
                 return RedirectToAction(nameof(Index));
             }
             catch

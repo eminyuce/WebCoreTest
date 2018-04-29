@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WebCoreTest.Services.DB
+namespace WebCoreTest.Domain.DB
 {
 
     public class DatabaseUtility

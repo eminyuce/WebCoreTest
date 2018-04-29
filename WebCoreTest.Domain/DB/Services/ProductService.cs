@@ -1,13 +1,10 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebCoreTest.Data.Entities;
-using WebCoreTest.Services.DB.Repositories;
+using WebCoreTest.Domain.Entities;
+using WebCoreTest.Domain.DB.Repositories;
+using Microsoft.Extensions.Logging;
 
-namespace WebCoreTest.Services.DB.Services
+namespace WebCoreTest.Domain.DB.Services
 {
     public class ProductService : IProductService
     {

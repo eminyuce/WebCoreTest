@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
-using WebCoreTest.Data.Entities;
+using WebCoreTest.Domain.Entities;
 
-namespace WebCoreTest.Services.DB.Repositories
+namespace WebCoreTest.Domain.DB.Repositories
 {
     public interface IProductRepository
     {

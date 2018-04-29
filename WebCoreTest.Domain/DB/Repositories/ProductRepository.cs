@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using WebCoreTest.Data.Entities;
-using WebCoreTest.Helpers;
+using WebCoreTest.Domain.Entities;
+using WebCoreTest.Domain.Helpers;
 
 
-namespace WebCoreTest.Services.DB.Repositories
+namespace WebCoreTest.Domain.DB.Repositories
 {
     public class ProductRepository : IProductRepository
     {

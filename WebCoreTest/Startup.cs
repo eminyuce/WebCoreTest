@@ -11,8 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using WebCoreTest.Data;
 using WebCoreTest.Models;
 using WebCoreTest.Services;
-using WebCoreTest.Services.DB.Repositories;
-using WebCoreTest.Services.DB.Services;
+using WebCoreTest.Domain.DB.Repositories;
+using WebCoreTest.Domain.DB.Services;
 
 namespace WebCoreTest
 {

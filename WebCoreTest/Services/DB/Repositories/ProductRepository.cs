@@ -24,7 +24,7 @@ namespace WebCoreTest.Services.DB.Repositories
         {
             get
             {
-                 return Configuration.GetConnectionString("TestEYConnectionString");
+                 return Configuration.GetConnectionString("DefaultConnection");
             }
         }
     

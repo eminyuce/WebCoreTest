@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCoreTest", "WebCoreTest\WebCoreTest.csproj", "{AE9B4C60-B1A0-4B6A-B069-A2DA19A017F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCoreTest.Domain", "WebCoreTest.Domain\WebCoreTest.Domain.csproj", "{6F2B835D-0DD1-4C7B-8661-1318415D86E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCoreTest.Domain", "WebCoreTest.Domain\WebCoreTest.Domain.csproj", "{6F2B835D-0DD1-4C7B-8661-1318415D86E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCore.UnitTest", "WebCore.UnitTest\WebCore.UnitTest.csproj", "{39B3D47D-6482-4410-A4C2-298B913F2F8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCore.UnitTest", "WebCore.UnitTest\WebCore.UnitTest.csproj", "{39B3D47D-6482-4410-A4C2-298B913F2F8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCore.UnitMSTest", "WebCore.UnitMSTest\WebCore.UnitMSTest.csproj", "{78FD2D9B-91D0-4CB9-B79C-12DB1334EAA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{39B3D47D-6482-4410-A4C2-298B913F2F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39B3D47D-6482-4410-A4C2-298B913F2F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39B3D47D-6482-4410-A4C2-298B913F2F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FD2D9B-91D0-4CB9-B79C-12DB1334EAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FD2D9B-91D0-4CB9-B79C-12DB1334EAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FD2D9B-91D0-4CB9-B79C-12DB1334EAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FD2D9B-91D0-4CB9-B79C-12DB1334EAA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

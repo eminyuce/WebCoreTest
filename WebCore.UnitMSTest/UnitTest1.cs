@@ -12,13 +12,30 @@ namespace WebCore.UnitMSTest
     [TestClass]
     public class UnitTest1
     {
+
+        private static IConfigurationRoot GetConfig()
+        {
+            return new ConfigurationBuilder()
+                        .SetBasePath(AppContext.BaseDirectory)
+                        .AddJsonFile("appsettings.Development.json")
+                        .Build();
+        }
+
+        [TestMethod]
+        public void TestMethod21()
+        {
+            IConfigurationRoot configuration = GetConfig();
+            MySqlRepository pp = new MySqlRepository();
+            //db_kodyazan
+            var con = configuration.GetConnectionString("MyDefaultConnection");
+            Console.WriteLine(con);
+            var items = pp.GetNwmHaberlers(con);
+            Console.WriteLine(items.Count);
+        }
         [TestMethod]
         public void TestMethod1()
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-.SetBasePath(AppContext.BaseDirectory)
-.AddJsonFile("appsettings.Development.json")
-.Build();
+            IConfigurationRoot configuration = GetConfig();
 
             var repo = new TableRepository();
 
@@ -27,6 +44,6 @@ namespace WebCore.UnitMSTest
             repo.GetSelectedTableMetaData(configuration.GetConnectionString("DefaultConnection"), "TestEY.dbo.Products");
         }
 
-      
+
     }
 }

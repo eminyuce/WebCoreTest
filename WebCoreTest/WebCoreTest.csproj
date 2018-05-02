@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <RuntimeIdentifiers>ubuntu.16.04.4-x64</RuntimeIdentifiers>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-WebCoreTest-22B20259-C5F9-4F0D-A124-F8FC73DA7D1F</UserSecretsId>
   </PropertyGroup>
 
-
+ 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" PrivateAssets="All" />

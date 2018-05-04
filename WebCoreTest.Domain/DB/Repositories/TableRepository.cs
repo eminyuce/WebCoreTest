@@ -257,7 +257,11 @@ namespace WebCoreTest.Domain.DB.Repositories
             }
             con.Close();
 
-
+            foreach (var item in TableRowMetaDataList)
+            {
+                Console.WriteLine(item.ColumnName);
+            }
+         
 
         }
         public class TableRowMetaData

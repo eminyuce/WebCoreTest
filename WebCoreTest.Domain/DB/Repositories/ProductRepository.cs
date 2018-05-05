@@ -13,18 +13,18 @@ namespace WebCoreTest.Domain.DB.Repositories
     public class ProductRepository : IProductRepository
     {
 
-        private IConfiguration Configuration { get; }
+        private MyAppSettings MyAppSettings { get; }
 
-        public ProductRepository(IConfiguration configuration)
+        public ProductRepository(MyAppSettings myAppSettings)
         {
-            Configuration = configuration;
+            MyAppSettings = myAppSettings;
         }
 
         private string ConnectionString
         {
             get
             {
-                 return Configuration.GetConnectionString("DefaultConnection");
+                 return MyAppSettings.ConnectionString;
             }
         }
     

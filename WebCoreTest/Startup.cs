@@ -13,6 +13,7 @@ using WebCoreTest.Models;
 using WebCoreTest.Services;
 using WebCoreTest.Domain.DB.Repositories;
 using WebCoreTest.Domain.DB.Services;
+using WebCoreTest.Domain;
 
 namespace WebCoreTest
 {
@@ -36,9 +37,11 @@ namespace WebCoreTest
                 .AddDefaultTokenProviders();
 
             // Add application services.
+            services.AddSingleton(new MyAppSettings(Configuration));
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<ITestService, TestService>();
-            services.AddTransient<IProductRepository>(s => new ProductRepository(Configuration));
+            services.AddTransient<IProductRepository, ProductRepository>();
+            // services.AddTransient<IProductRepository>(s => new ProductRepository(Configuration));
             services.AddTransient<IProductService, ProductService>();
 
             services.AddMvc();
